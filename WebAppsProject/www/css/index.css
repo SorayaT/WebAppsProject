@@ -113,3 +113,30 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+#loginbox{
+    margin:auto;
+    width:80%;
+}
+#firstscreen{
+    margin:auto;
+    width:80%;
+}
+#header{
+    width:80%;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logininput{
+    width:100%;
+    height:40px;
+    margin-bottom: 20px;
+}
+#nextbutton{
+    display: block;
+    float:right;
+    width:100px;
+    overflow:auto;
+    height:20px;
+    background-color: white;
+}
