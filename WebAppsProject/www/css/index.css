@@ -137,6 +137,30 @@ h1 {
     float:right;
     width:100px;
     overflow:auto;
-    height:20px;
+    height:35px;
     background-color: white;
+}
+
+.transition {
+    -moz-transition-duration: .375s;
+    -webkit-transition-duration: .375s;
+    -o-transition-duration: .375s;
+}
+
+.header{
+    background-color: #FF8282;
+    margin-bottom: 20px;
+    height:30px;
+    overflow:auto;
+}
+
+.header a{
+    margin-top:6px;
+    display: inline-block;
+    font-size: 17px;
+    margin-right: 15px;
+    margin-left: 20px;
+    color:black;
+    font-style: none;
+    text-decoration: none;
 }
