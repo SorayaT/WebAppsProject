@@ -35,7 +35,21 @@
         <script type="text/javascript">
             app.initialize();
         </script>
-        <header><img src = "navicon.png" align="left" height="30" width="35">Profile<img src = "settings.png" align="right" height="30"                     width="30">
+        <header><img src = "navicon.png" align="left" height="30" width="35">
+            <a href="javascript:void(0);" class="select_button1"><img alt="" src="images/navicon.png" /></a>
+            <br/>
+            <select class="select1" size="5" style="display:none">        
+                <option name="test" value="" class="first">Select</option>       
+                <option name="test" value="" class="">Opt1</option>       
+                <option name="test" value="" class="">Opt2</option>
+            </select>
+                Profile<img src = "settings.png" align="right" height="30" width="30">
+            <script>
+                $('.select_button1').click(function() {
+                $('.select1').toggle();
+                });
+            </script>
+                
         </header>
         <section>
             <img src = "cover.jpg" height="200" width="320">
