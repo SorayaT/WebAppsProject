@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script>
+            
+          
+        function submitForm(){
+            var fname= $("[name='FirstName']").val();
+            var sname= $("[name='LastName']").val();
+            var username= $("[name='username']").val();
+            var email= $("[name='email']").val();
+            var password= $("[name='password']").val();
+            var repeatpassword= $("[name='repeatpassword']").val();
+            
+            window.localStorage.setItem("firstname", fname);
+            window.localStorage.setItem("LastName", sname);
+            window.localStorage.setItem("username", username);
+            window.localStorage.setItem("email", email);
+            window.localStorage.setItem("password", password);
+            window.localStorage.setItem("repeatpassword", repeatpassword);
+
+            
+
+            return false;   
+        }
+        </script>
 	</head>
 	<body>
+        <div data-role="page" id="page2" data-add-back-btn="true">
+        </div>
 		<div class="header">
 			<a href="index.html">HOME</a> 
 			<a href="login.html">LOGIN</a>
@@ -10,10 +37,10 @@
 		</div>
 		<h1 id="header">Registration</h1>
 		<div id="firstscreen">
-			<form>
+			<form method="POST" onsubmit="return submitForm()">
 				<input class="logininput" type= "text" name="FirstName" value="FIRST NAME"><br>
 				<input class="logininput" type= "text" name="LastName" value="LAST NAME"><br>
-				<input class="logininput" type= "text" name="login" value="LOGIN"><br>
+				<input class="logininput" type= "text" name="username" value="USERNAME"><br>
 				<input class="logininput" type= "text" name="email" value="EMAIL"><br>
 				<input class="logininput" type= "text" name="password" value="PASSWORD"><br>
 				<input class="logininput" type= "text" name="repeatpassword" value="REPEAT PASSWORD"><br>
