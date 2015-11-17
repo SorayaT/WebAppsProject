@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script>
-            
-          
-        function submitForm(){
-            var fname= $("[name='FirstName']").val();
-            var sname= $("[name='LastName']").val();
-            var username= $("[name='username']").val();
-            var email= $("[name='email']").val();
-            var password= $("[name='password']").val();
-            var repeatpassword= $("[name='repeatpassword']").val();
-            
-            window.localStorage.setItem("firstname", fname);
-            window.localStorage.setItem("LastName", sname);
-            window.localStorage.setItem("username", username);
-            window.localStorage.setItem("email", email);
-            window.localStorage.setItem("password", password);
-            window.localStorage.setItem("repeatpassword", repeatpassword);
+		<script src="js/jquery-2.1.4.js"></script>
+		<!-- // <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+		<!-- // <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" /> -->
 
-            
+		<script>
+	        function submitForm() {
+	            var fname= $('[name="FirstName"]').val();
+	            var sname= $('[name="LastName"]').val();
+	            var username= $('[name="username"]').val();
+	            var email= $('[name="email"]').val();
+	            var password= $('[name="password"]').val();
+	            var repeatpassword= $('[name="repeatpassword"]').val();
+	            
+	            window.localStorage.setItem("firstname", fname);
+	            window.localStorage.setItem("LastName", sname);
+	            window.localStorage.setItem("username", username);
+	            window.localStorage.setItem("email", email);
+	            window.localStorage.setItem("password", password);
+	            window.localStorage.setItem("repeatpassword", repeatpassword);
 
-            return false;   
-        }
+
+				$.mobile.changePage( "#page2", { reverse: false, transition: "slide" } );           
+				// $.('#output').html("username: " + window.localStorage.getItem["username"]);
+	             $('#output').html("Username: " + window.localStorage.getItem("username") + "<br>" + 
+	             	"Email: " + window.localStorage["email"]);
+	            
+	            return false;   
+	        }
         </script>
-	</head>
+    </head>
+
 	<body>
-        <div data-role="page" id="page2" data-add-back-btn="true">
-        </div>
 		<div class="header">
 			<a href="index.html">HOME</a> 
 			<a href="login.html">LOGIN</a>
 			<a href="registration.html">REGISTRATION</a>
 		</div>
 		<h1 id="header">Registration</h1>
-		<div id="firstscreen">
-			<form method="POST" onsubmit="return submitForm()">
-				<input class="logininput" type= "text" name="FirstName" value="FIRST NAME"><br>
-				<input class="logininput" type= "text" name="LastName" value="LAST NAME"><br>
-				<input class="logininput" type= "text" name="username" value="USERNAME"><br>
-				<input class="logininput" type= "text" name="email" value="EMAIL"><br>
-				<input class="logininput" type= "text" name="password" value="PASSWORD"><br>
-				<input class="logininput" type= "text" name="repeatpassword" value="REPEAT PASSWORD"><br>
-				<input class="logininput" type= "text" name="DOB" value="DOB"><br>
-				<input id="nextbutton" type="submit" value="Next">
-			</form>
+        <div data-role="page" id="page1" data-add-back-btn="true">
+        	<div data-role="content">
+				<form method="POST" onSubmit="return submitForm()">
+					<input class="logininput" type= "text" name="FirstName" value="FIRST NAME"><br>
+					<input class="logininput" type= "text" name="LastName" value="LAST NAME"><br>
+					<input class="logininput" type= "text" name="username" value="USERNAME"><br>
+					<input class="logininput" type= "text" name="email" value="EMAIL"><br>
+					<input class="logininput" type= "text" name="password" value="PASSWORD"><br>
+					<input class="logininput" type= "text" name="repeatpassword" value="REPEAT PASSWORD"><br>
+					<input class="logininput" type= "text" name="DOB" value="DOB"><br>
+					<input id="nextbutton" type="submit" value="SUBMIT">
+				</form>
+			</div>
 		</div>
-		<div id="firstscreen">
-			<?php
-				echo "hello";
-			?>
+		<div data-role="page" id="page2" data-add-btn="true">
+			<h1>Page Two</h1>
+			<div data-role="content">
+				<div id="output">
+				</div>
+			</div>
 		</div>
 	</body>
 </html>	
