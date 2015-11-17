@@ -5,7 +5,7 @@
 		<!-- // <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 		<!-- // <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
-		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" /> -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 
 		<script>
 	        function submitForm() {
@@ -24,13 +24,19 @@
 	            window.localStorage.setItem("repeatpassword", repeatpassword);
 
 
-				$.mobile.changePage( "#page2", { reverse: false, transition: "slide" } );           
+				$.mobile.changePage( "#page2", { reverse: false, transition: "slide" } );
+         
 				// $.('#output').html("username: " + window.localStorage.getItem["username"]);
-	             $('#output').html("Username: " + window.localStorage.getItem("username") + "<br>" + 
-	             	"Email: " + window.localStorage["email"]);
+	             $('#output').html("First Name: " + window.localStorage.getItem("fname") + "<br>" + 
+	             	"Last Name: " + window.localStorage["sname"]+ "<br>" + 
+	             	"Username: " + window.localStorage["username"]+ "<br>" + 
+	             	"Email: " + window.localStorage["email"]+ "<br>" + 
+	             	"Password: " + window.localStorage["password"]+ "<br>" + 
+	             	"Repeat Password: " + window.localStorage["repeatpassword"]);
 	            
 	            return false;   
 	        }
+
         </script>
     </head>
 
@@ -51,7 +57,7 @@
 					<input class="logininput" type= "text" name="password" value="PASSWORD"><br>
 					<input class="logininput" type= "text" name="repeatpassword" value="REPEAT PASSWORD"><br>
 					<input class="logininput" type= "text" name="DOB" value="DOB"><br>
-					<input id="nextbutton" type="submit" value="SUBMIT">
+					<input type="submit" value="SUBMIT">
 				</form>
 			</div>
 		</div>
