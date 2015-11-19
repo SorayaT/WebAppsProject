@@ -131,7 +131,42 @@ h1 {
     width:100%;
     height:40px;
     margin-bottom: 20px;
+    padding-left: 10px;
 }
+
+
+/* CSS for PLACEHOLDER !!!!!!!!!!!!!!!!!!!!!!!! */
+
+::-webkit-input-placeholder {
+ font-size: 14px;
+ color: #d0cdfa;
+ text-transform: uppercase;
+ text-transform: uppercase;
+ text-align: left;
+ font-weight: bold;
+}
+:-moz-placeholder { /* older Firefox*/
+ font-size:14px;
+ color: #8585ad;
+ text-transform: uppercase;
+ text-align: left;
+ font-weight: bold;
+}
+::-moz-placeholder { /* Firefox 19+ */ 
+ font-size: 14px;
+ color: #d0cdfa; 
+ text-transform: uppercase;
+ text-align: left;
+ font-weight: bold;
+} 
+:-ms-input-placeholder { 
+ font-size: 14px; 
+ color: #d0cdfa;
+ text-transform: uppercase;
+ text-align: left;
+ font-weight: bold;
+}
+
 #nextbutton{
     display: block;
     float:right;
