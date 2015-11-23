@@ -31,7 +31,7 @@
 	             	"Last Name: " + window.localStorage["LastName"]+ "<br>" + 
 	             	"Username: " + window.localStorage["username"]+ "<br>" + 
 	             	"Email: " + window.localStorage["email"]+ "<br>" + 
-	             	"Password: " + window.localStorage["password"]+ "<br>" + 
+	             	"Password: " + sessionStorage.localStorage["password"]+ "<br>" + 
 	             	"Repeat Password: " + window.localStorage["repeatpassword"]);
 	            
 	            return false;   
@@ -41,6 +41,10 @@
             $.mobile.changePage( "#page1", { reverse: true, transition: "slide" } );
 
             }
+            
+            //var localData = JSON.parse(window.localStorage.getItem('email');
+                                       
+            //$.each{function(
 
         </script>
     </head>
@@ -55,13 +59,13 @@
         <div data-role="page" id="page1" data-add-btn="true">
         	<div data-role="content">
 				<form method="POST" onSubmit="return submitForm()">
-					<input class="logininput" type= "text" name="FirstName" value="FIRST NAME"><br>
-					<input class="logininput" type= "text" name="LastName" value="LAST NAME"><br>
-					<input class="logininput" type= "text" name="username" value="USERNAME"><br>
-					<input class="logininput" type= "text" name="email" value="EMAIL"><br>
-					<input class="logininput" type= "text" name="password" value="PASSWORD"><br>
-					<input class="logininput" type= "text" name="repeatpassword" value="REPEAT PASSWORD"><br>
-					<input class="logininput" type= "text" name="DOB" value="DOB"><br>
+					<input class="logininput" type="text" name="FirstName" placeholder="Enter First Name"><br>
+					<input class="logininput" type="text" name="LastName" placeholder="Enter Last Name"><br>
+					<input class="logininput" type="text" name="username" placeholder="Enter Username" required><br>
+					<input class="logininput" type="text" name="email" placeholder="Enter Email" required><br>
+					<input class="logininput" type="text" name="password" placeholder="Enter Password" required><br>
+					<input class="logininput" type="text" name="repeatpassword" placeholder="Confirm Password" required><br>
+					<input class="logininput" type="date" name="DOB" placeholder="Enter Date of birth"><br>
 					<input type="submit" value="SUBMIT">
 				</form>
 			</div>
