@@ -24,7 +24,10 @@
                      
                 return false;
             }
- 
+            function returntopage1(){
+            $.mobile.changePage( "#page1", { reverse: false, transition: "slide" } );
+
+            }
  
         </script>
          
@@ -58,6 +61,9 @@
             <div data-role="content"> 
                 <div id="output">
                 </div>
+                <form method="POST" onSubmit="returntopage1()" data-ajax="false"> 
+                    <input type="submit" value="Submit">
+                </form>
                      
             </div>
              

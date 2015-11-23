@@ -16,7 +16,7 @@
 	            var password= $('[name="password"]').val();
 	            var repeatpassword= $('[name="repeatpassword"]').val();
 	            
-	            window.localStorage.setItem("firstname", fname);
+	            window.localStorage.setItem("FirstName", fname);
 	            window.localStorage.setItem("LastName", sname);
 	            window.localStorage.setItem("username", username);
 	            window.localStorage.setItem("email", email);
@@ -27,8 +27,8 @@
 				$.mobile.changePage( "#page2", { reverse: false, transition: "slide" } );
          
 				// $.('#output').html("username: " + window.localStorage.getItem["username"]);
-	             $('#output').html("First Name: " + window.localStorage.getItem("fname") + "<br>" + 
-	             	"Last Name: " + window.localStorage["sname"]+ "<br>" + 
+	             $('#output').html("First Name: " + window.localStorage.getItem("FirstName") + "<br>" + 
+	             	"Last Name: " + window.localStorage["LastName"]+ "<br>" + 
 	             	"Username: " + window.localStorage["username"]+ "<br>" + 
 	             	"Email: " + window.localStorage["email"]+ "<br>" + 
 	             	"Password: " + window.localStorage["password"]+ "<br>" + 
@@ -36,6 +36,11 @@
 	            
 	            return false;   
 	        }
+
+	        function returntopage1(){
+            $.mobile.changePage( "#page1", { reverse: true, transition: "slide" } );
+
+            }
 
         </script>
     </head>
@@ -47,7 +52,7 @@
 			<a href="registration.html">REGISTRATION</a>
 		</div>
 		<h1 id="header">Registration</h1>
-        <div data-role="page" id="page1" data-add-back-btn="true">
+        <div data-role="page" id="page1" data-add-btn="true">
         	<div data-role="content">
 				<form method="POST" onSubmit="return submitForm()">
 					<input class="logininput" type= "text" name="FirstName" value="FIRST NAME"><br>
@@ -66,6 +71,9 @@
 			<div data-role="content">
 				<div id="output">
 				</div>
+				<form method="POST" onSubmit="returntopage1()" data-ajax="false"> 
+                    <input type="submit" value="Submit">
+                </form>
 			</div>
 		</div>
 	</body>
