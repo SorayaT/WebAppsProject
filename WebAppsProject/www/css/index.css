@@ -113,3 +113,54 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+#loginbox{
+    margin:auto;
+    width:80%;
+}
+#firstscreen{
+    margin:auto;
+    width:80%;
+}
+#header{
+    width:80%;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logininput{
+    width:100%;
+    height:40px;
+    margin-bottom: 20px;
+}
+#nextbutton{
+    display: block;
+    float:right;
+    width:100px;
+    overflow:auto;
+    height:35px;
+    background-color: white;
+}
+
+.transition {
+    -moz-transition-duration: .375s;
+    -webkit-transition-duration: .375s;
+    -o-transition-duration: .375s;
+}
+
+.header{
+    background-color: #FF8282;
+    margin-bottom: 20px;
+    height:30px;
+    overflow:auto;
+}
+
+.header a{
+    margin-top:6px;
+    display: inline-block;
+    font-size: 17px;
+    margin-right: 15px;
+    margin-left: 20px;
+    color:black;
+    font-style: none;
+    text-decoration: none;
+}
