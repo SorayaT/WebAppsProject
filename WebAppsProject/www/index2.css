@@ -19,6 +19,12 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
+.button-link {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+}
+
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -113,107 +119,122 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
-#loginbox{
-    margin:auto;
-    width:80%;
-}
-#firstscreen{
-    margin:auto;
-    width:80%;
-}
-#header{
-    width:80%;
-    margin:auto;
+
+header{
     text-align: center;
-    margin-bottom: 30px;
-}
-.logininput{
-    width:100%;
-    height:40px;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    border: 3px solid #cccccc;
-    box-shadow: 0px 0px 3px 1px #cccccc;
-}
-
-
-/* CSS for PLACEHOLDER !!!!!!!!!!!!!!!!!!!!!!!! */
-
-::-webkit-input-placeholder {
- font-size: 14px;
- color: #d0cdfa;
- text-transform: uppercase;
- text-transform: uppercase;
- text-align: left;
- font-weight: bold;
-}
-:-moz-placeholder { /* older Firefox*/
- font-size:14px;
- color: #8585ad;
- text-transform: uppercase;
- text-align: left;
- font-weight: bold;
-}
-::-moz-placeholder { /* Firefox 19+ */ 
- font-size: 14px;
- color: #d0cdfa; 
- text-transform: uppercase;
- text-align: left;
- font-weight: bold;
-} 
-:-ms-input-placeholder { 
- font-size: 14px; 
- color: #d0cdfa;
- text-transform: uppercase;
- text-align: left;
- font-weight: bold;
-}
-
-
-.logininput:focus
-{
-background:#e6edfc;
-border:3px solid #cccccc;
--webkit-box-shadow: 0px 2px 48px -17px rgba(5,5,5,1);
--moz-box-shadow: 0px 2px 48px -17px rgba(5,5,5,1);
-box-shadow: 0px 2px 48px -17px rgba(5,5,5,1);
-}
-
-#nextbutton{
-    display: block;
-    float:right;
-    width:100px;
-    overflow:auto;
-    height:35px;
-    background-color: white;
-}
-
-.transition {
-    -moz-transition-duration: .375s;
-    -webkit-transition-duration: .375s;
-    -o-transition-duration: .375s;
-}
-
-.header{
-    background-color: #FF8282;
-    margin-bottom: 100px;
-    height:100%;
-    overflow:auto;
-    margin-top: 20px;
-    text-align: center;
+    color: darkgrey;
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 200%;
     
+    margin-top: 20px;
 }
 
-.header a{
-    margin-top:6px;
-    display: block;
-    font-size: 20px;
-    margin-left: 10px;
-    color:black;
-    font-style: none;
-    text-decoration: none;
+section{
+    text-align: center;
 }
-.header a:hover{
-    background-color: #FF8250;
-    font-style: oblique;
+
+article{
+    background-color: black;
+    font-size: 150%;
+    text-align: center;
+    color: darkgrey;
+    padding-top: 10px;
+}
+
+hr{
+    color: darkgrey;
+}
+
+#naviconmenu{
+    display:none;
+    background-color: black;
+    font-size: 180%;
+    text-align: center;
+    color: darkgrey;
+    padding-top: 10px;
+    position: absolute;
+    z-index: 5;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#settingsmenu{
+    display:none;
+    background-color: black;
+    font-size: 180%;
+    text-align: center;
+    color: darkgrey;
+    padding-top: 10px;
+    position: absolute;
+    z-index: 5;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 10px;
+}
+
+#naviconmenu a{
+    color:black;
+}
+#naviconmenu a:link {
+  background: darkgray;
+  background-image: -webkit-linear-gradient(top, darkgray, #5e6163);
+  background-image: -moz-linear-gradient(top, darkgray, #5e6163);
+  background-image: -ms-linear-gradient(top, darkgray, #5e6163);
+  background-image: -o-linear-gradient(top, darkgray, #5e6163);
+  background-image: linear-gradient(to bottom, darkgray, #5e6163);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #050005;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  
+}
+
+#naviconmenu a:hover {
+  background: #4e5052;
+  background-image: -webkit-linear-gradient(top, #4e5052, darkgray);
+  background-image: -moz-linear-gradient(top, #4e5052, darkgray);
+  background-image: -ms-linear-gradient(top, #4e5052, darkgray);
+  background-image: -o-linear-gradient(top, #4e5052, darkgray);
+  background-image: linear-gradient(to bottom, #4e5052, darkgray);
+  text-decoration: none;
+}
+
+#settingsmenu a{
+    color:black;
+}
+#settingsmenu a:link {
+  background: darkgray;
+  background-image: -webkit-linear-gradient(top, darkgray, #5e6163);
+  background-image: -moz-linear-gradient(top, darkgray, #5e6163);
+  background-image: -ms-linear-gradient(top, darkgray, #5e6163);
+  background-image: -o-linear-gradient(top, darkgray, #5e6163);
+  background-image: linear-gradient(to bottom, darkgray, #5e6163);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #050005;
+  font-size: 9px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  line-height: 10px;
+}
+
+#settingsmenu a:hover {
+  background: #4e5052;
+  background-image: -webkit-linear-gradient(top, #4e5052, darkgray);
+  background-image: -moz-linear-gradient(top, #4e5052, darkgray);
+  background-image: -ms-linear-gradient(top, #4e5052, darkgray);
+  background-image: -o-linear-gradient(top, #4e5052, darkgray);
+  background-image: linear-gradient(to bottom, #4e5052, darkgray);
+  text-decoration: none;
 }
